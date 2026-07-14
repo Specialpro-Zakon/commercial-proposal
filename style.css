@@ -594,6 +594,10 @@ img{max-width:100%;height:auto;display:block}
   --cap-offset:130px; /* высота подписи + прозрачное поле над монитором в PNG */
 }
 .socials,.specs{margin-top:var(--cap-offset)}
+/* в колонке соцсетей подпись уже занимает верх — карточкам остаётся добрать
+   только прозрачное поле над монитором в PNG */
+.socials-col .mockup-caption{padding-left:0}
+.socials-col .socials{margin-top:48px}
 /* второй формат зеркалим: характеристики слева, мокап справа.
    Подпись здесь живёт в левой колонке, над карточками, поэтому смещение
    получает уже сам мокап — так верх монитора встаёт вровень с первой карточкой */
@@ -1066,6 +1070,7 @@ img{max-width:100%;height:auto;display:block}
   .idea-inner{grid-template-columns:1fr;gap:44px}
   .idea-art{max-width:600px}
   .campaign-top{grid-template-columns:1fr;gap:38px;--cap-offset:0px}
+  .socials-col .socials{margin-top:0}
   /* в одну колонку порядок: подпись → мокап → карточки. Ради этого раскрываем
      .specs-col через display:contents, иначе подпись уедет вниз вместе с карточками */
   .campaign-top--reverse{grid-template-columns:1fr}
